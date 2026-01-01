@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.employeemanagementsystem.controller.EmployeeController"
+      spacing="12">
+
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Employee Panel" styleClass="title-label"/>
+        <Button text="Back" onAction="#onBack" styleClass="back-button"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Your Employee ID:"/>
+        <TextField fx:id="idField" prefWidth="90"/>
+        <Button text="View" onAction="#onView"/>
+    </HBox>
+
+    <TitledPane text="Your information" expanded="true">
+        <content>
+            <GridPane hgap="10" vgap="10">
+                <children>
+                    <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="nameLabel" styleClass="value-label"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="emailLabel" styleClass="value-label"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Department:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="departmentLabel" styleClass="value-label"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Salary:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Label fx:id="salaryLabel" styleClass="value-label"
+                           GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                </children>
+            </GridPane>
+        </content>
+    </TitledPane>
+
+</VBox>

@@ -1,0 +1,105 @@
+/* app.css */
+
+/* Root background + default font */
+.root {                                              /* Applies to the root node of each scene */
+    -fx-font-family: "Segoe UI", "Roboto", "Arial";  /* Font stack */
+    -fx-background-color: linear-gradient(to bottom, #111827, #0b1220); /* Dark gradient bg */
+    -fx-text-fill: #e5e7eb;                          /* Default text color */
+}
+
+/* General label color */
+.label {
+    -fx-text-fill: #e5e7eb;                          /* Make labels visible on dark bg */
+}
+
+/* Big title style (used by styleClass="title-label") */
+.title-label {
+    -fx-font-size: 22px;                             /* Bigger font */
+    -fx-font-weight: bold;                           /* Bold title */
+    -fx-text-fill: #f9fafb;                          /* Slightly brighter */
+}
+
+/* Default button style */
+.button {
+    -fx-background-color: linear-gradient(to right, #2563eb, #1d4ed8); /* Blue gradient */
+    -fx-text-fill: #ffffff;                          /* White text */
+    -fx-font-weight: bold;                           /* Bold labels */
+    -fx-background-radius: 8;                        /* Rounded corners */
+    -fx-padding: 8 18 8 18;                          /* Internal padding */
+}
+
+/* Hover effect */
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #1d4ed8, #1e40af); /* Darker on hover */
+}
+
+/* Special back button (styleClass="back-button") */
+.back-button {
+    -fx-background-color: transparent;               /* Transparent background */
+    -fx-text-fill: #9ca3af;                          /* Gray text */
+    -fx-border-color: #374151;                       /* Border line */
+    -fx-border-radius: 8;                            /* Rounded border */
+    -fx-background-radius: 8;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-background-color: rgba(15, 23, 42, 0.85);    /* Dark input bg */
+    -fx-text-fill: #e5e7eb;                          /* Input text color */
+    -fx-prompt-text-fill: #6b7280;                   /* Placeholder text */
+    -fx-border-color: #374151;                       /* Border */
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* Focused TextField glow */
+.text-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.35), 10, 0.2, 0, 0);
+}
+
+/* TitledPane header + content */
+.titled-pane > .title {
+    -fx-background-color: rgba(17, 24, 39, 0.9);
+    -fx-font-weight: bold;
+}
+.titled-pane > .content {
+    -fx-background-color: rgba(15, 23, 42, 0.85);
+    -fx-border-color: #374151;
+}
+
+/* TableView container */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #374151;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+/* Table header background */
+.table-view .column-header-background {
+    -fx-background-color: rgba(17, 24, 39, 1);
+}
+
+/* Header labels */
+.table-view .column-header .label {
+    -fx-text-fill: #e5e7eb;
+    -fx-font-weight: bold;
+}
+
+/* Table rows (even/odd) */
+.table-row-cell {
+    -fx-background-color: rgba(17, 24, 39, 0.85);
+}
+.table-row-cell:odd {
+    -fx-background-color: rgba(15, 23, 42, 0.85);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #1d4ed8;
+}
+
+.value-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3f4f6;
+}

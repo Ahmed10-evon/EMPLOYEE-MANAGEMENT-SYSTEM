@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.employeemanagementsystem.controller.AdminMenuController"
+      spacing="12" alignment="CENTER">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Admin Menu" styleClass="title-label"/>
+
+    <Button text="View employees" onAction="#onView" prefWidth="240"/>
+    <Button text="Add employee" onAction="#onAdd" prefWidth="240"/>
+    <Button text="Remove employee" onAction="#onRemove" prefWidth="240"/>
+
+    <Button text="Change password" onAction="#onChangePassword" prefWidth="240"/>
+    <Button text="Add admin" onAction="#onAddAdmin" prefWidth="240"/>
+    <Button text="Update employee" onAction="#onUpdate" prefWidth="240"/>
+
+    <Button text="Back" onAction="#onBack" styleClass="back-button" prefWidth="240"/>
+</VBox>

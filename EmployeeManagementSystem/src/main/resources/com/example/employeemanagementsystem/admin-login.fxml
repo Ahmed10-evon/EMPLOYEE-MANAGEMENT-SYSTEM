@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.employeemanagementsystem.controller.AdminLoginController"
+      spacing="12" alignment="CENTER">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Admin Login" styleClass="title-label"/>
+
+    <TextField fx:id="emailField" promptText="Email" prefWidth="260"/>
+    <PasswordField fx:id="passwordField" promptText="Password" prefWidth="260"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Login" onAction="#onLogin" prefWidth="120"/>
+        <Button text="Back" onAction="#onBack" styleClass="back-button" prefWidth="120"/>
+    </HBox>
+</VBox>

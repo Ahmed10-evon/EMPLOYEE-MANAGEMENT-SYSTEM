@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.employeemanagementsystem.controller.AdminViewController">
+
+    <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="View Employees" styleClass="title-label"/>
+            <Button text="Menu" onAction="#onMenu" styleClass="back-button"/>
+            <Button text="Refresh" onAction="#onRefresh"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="employeeTable" prefHeight="520">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="170"/>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="220"/>
+                <TableColumn fx:id="departmentColumn" text="Department" prefWidth="170"/>
+                <TableColumn fx:id="salaryColumn" text="Salary" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

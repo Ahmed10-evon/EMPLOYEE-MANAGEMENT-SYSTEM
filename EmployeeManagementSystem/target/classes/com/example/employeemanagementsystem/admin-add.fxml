@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.employeemanagementsystem.controller.AdminAddController">
+
+    <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Add Employee" styleClass="title-label"/>
+            <Button text="Menu" onAction="#onMenu" styleClass="back-button"/>
+            <Button text="Refresh" onAction="#onRefresh"/>
+            <Button text="Reset" onAction="#onResetEmployees"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="employeeTable" prefHeight="350">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="170"/>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="220"/>
+                <TableColumn fx:id="departmentColumn" text="Department" prefWidth="170"/>
+                <TableColumn fx:id="salaryColumn" text="Salary" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <TitledPane text="Add employee" expanded="true">
+            <content>
+                <GridPane hgap="10" vgap="10">
+                    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+                    <children>
+                        <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Department:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="departmentField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Salary:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="salaryField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Button text="Add" onAction="#onAddEmployee"
+                                GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+            </content>
+        </TitledPane>
+    </bottom>
+</BorderPane>

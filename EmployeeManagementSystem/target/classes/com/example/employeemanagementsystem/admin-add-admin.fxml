@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.employeemanagementsystem.controller.AdminAddAdminController"
+      alignment="CENTER"
+      spacing="12">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="Add New Admin" styleClass="title-label">
+        <font>
+            <Font name="System Bold" size="22"/>
+        </font>
+    </Label>
+
+    <VBox spacing="8" maxWidth="320">
+        <Label text="Admin Email"/>
+        <TextField fx:id="emailField" promptText="[email protected]"/>
+
+        <Label text="Password"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+
+        <Label text="Confirm Password"/>
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password"/>
+
+        <Button text="Create Admin" maxWidth="Infinity" onAction="#onCreateAdmin"/>
+        <Button text="Back to Menu" maxWidth="Infinity" onAction="#onBackToMenu" styleClass="back-button"/>
+    </VBox>
+</VBox>
